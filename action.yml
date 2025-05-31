@@ -78,6 +78,7 @@ runs:
         else
           echo "✅ settings.json found."
         fi
+      shell: bash
     - name: Check for claude nstructions
       run: |
         if [ ! -f "$HOME/CLAUDE.md" ]; then
@@ -86,6 +87,7 @@ runs:
         else
           echo "✅ CLAUDE.md found."
         fi
+      shell: bash
     - name: Configure Git
       run: |
         git config --global user.name "${{ inputs.agent-name }}"
