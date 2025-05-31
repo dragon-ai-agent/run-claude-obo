@@ -72,17 +72,17 @@ runs:
   steps:
     - name: Check for claude settings
       run: |
-        if [ ! -f "$HOME/.claude/settings.json" ]; then
-          echo "❌ settings.json not found at ~/.claude/"
+        if [ ! -f ".claude/settings.json" ]; then
+          echo "❌ settings.json not found at .claude/"
           exit 1
         else
           echo "✅ settings.json found."
         fi
       shell: bash
-    - name: Check for claude nstructions
+    - name: Check for claude instructions
       run: |
-        if [ ! -f "$HOME/CLAUDE.md" ]; then
-          echo "❌ CLAUDE.md not found at in home dir"
+        if [ ! -f "./CLAUDE.md" ]; then
+          echo "❌ CLAUDE.md not found at in working dir"
           exit 1
         else
           echo "✅ CLAUDE.md found."
